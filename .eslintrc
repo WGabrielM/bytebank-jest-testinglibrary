@@ -23,7 +23,6 @@
       "import/no-unresolved": "off"
     },
     "plugins": [
-      "react",
       "import",
       "jsx-a11y"
     ],
