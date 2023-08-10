@@ -1,5 +1,5 @@
-const { render, screen } = require('@testing-library/react');
 import Cabecalho from './index';
+const { render, screen } = require('@testing-library/react');
 
 test('Primeiro teste', () => {
   const numero = 10;
