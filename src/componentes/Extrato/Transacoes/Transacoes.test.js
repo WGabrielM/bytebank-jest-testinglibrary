@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Transacoes from './index';
+
 import estilos from '../Extrato.module.css';
 
 test('Deve renderizar o mesmo component com props atualizadas', () => {
@@ -20,6 +21,7 @@ test('Deve renderizar o mesmo component com props atualizadas', () => {
     transacao: 'Transferência',
     valor: 50,
   };
+  // chamar o mesmo component com props diferentes
   rerender(<Transacoes estilos={estilos} transacoes={novaTransacao} />);
   const novoTipoTransacao = screen.getByTestId('tipoTransacao');
   const novoValorTransacao = screen.getByTestId('ValorTransacao');
