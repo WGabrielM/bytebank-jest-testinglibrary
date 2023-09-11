@@ -1,6 +1,6 @@
 import { calculaNovoSaldo } from './index';
 
-test('Deve retornar o valor do saldo atualizado com o rendimento', () => {
+it('Deve retornar o valor do saldo atualizado com o rendimento', () => {
   // fn() permite utilizar funções dentro dos testes
   const calculaRendimento = jest.fn((saldo) => saldo + saldo * 0.005);
 
@@ -13,6 +13,8 @@ test('Deve retornar o valor do saldo atualizado com o rendimento', () => {
   expect(calculaRendimento).toBeCalled();
   // Verifica se foi chamado com os argumentos específicos
   expect(calculaRendimento).toHaveBeenCalledWith(saldo);
+
+  // Em casos reais é melhor dividir esses três expect em três testes para ficar mais organizado
 });
 
 // Conceito do TDD, criar um teste para falhar e realizar os devidos ajustes
